@@ -1,0 +1,22 @@
+
+function createProduct(id, name, stock, price) {
+  let newProduct = {}; 
+  newProduct.id = id;
+  newProduct.name = name;
+  newProduct.stock = stock;
+  newProduct.price = price;
+  newProduct.setPrice = function(newPrice) {
+    if (newPrice >= 0) {
+    this.price = newPrice; 
+  } else {
+    alert("Invalid Price!");
+  }
+};
+  newProduct.describe = function() {
+    console.log(`Name: ` + this.name);
+    console.log(`ID: ` + this.id); 
+    console.log(`Stock: ` + this.stock);
+    console.log(`Price ` + this.price); 
+  };
+  return newProduct;
+}
